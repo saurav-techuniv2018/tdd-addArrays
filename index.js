@@ -71,6 +71,14 @@ console.log('Test for arrays of equal length containing only numbers:',
     compareArrays(addArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]), [7, 9, 11, 13, 15]));
 console.log('Test for arrays of different length containing numbers:',
     (addArrays([3, 4, 5], [6, 7, 8, 9, 10]) === null));
+console.log('Test for arrays containing invalid values:',
+    addArrays([1, {}, 3], [4, 5, 6]) === null);
+console.log('Test for call without arguments:',
+    addArrays() === null);
+console.log('Test for arrays with NaN and Infinity:',
+    addArrays([1, 2, NaN], [2, 3, 4]) === null);
+console.log('Test with arguments as NaN:',
+    addArrays(NaN, NaN) === null);
 
 function compareArrays(firstArray, secondArray) {
     if (firstArray.length !== secondArray.length) { return false; }
