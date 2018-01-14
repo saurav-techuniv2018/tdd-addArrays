@@ -51,7 +51,7 @@ function addArrays(firstArray, secondArray) {
 //TEST verifyNumber
 console.log('Test a valid number 4:',
     verifyNumber(4));
-console.log('Test a valid number 4:',
+console.log('Test for null:',
     verifyNumber(null) === false);
 
 //TEST verifyArray
